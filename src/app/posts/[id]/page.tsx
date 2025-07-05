@@ -1,5 +1,3 @@
-
-
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -57,21 +55,23 @@ function generateCarSpecs(postId: number): CarSpecs {
 }
 
 export default async function PostDetail({ params }: { params: { id: string } }) {
+  const postId = Number(params.id);
+
   try {
-    const post = await getPost(Number(params.id));
+    const post = await getPost(postId);
     const user = await getUser(post.userId);
     const carSpecs = generateCarSpecs(post.id);
 
     return (
       <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-8xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="mb-8">
-            <Link 
-              href="/" 
+            <Link
+              href="/"
               className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors"
             >
               <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
               </svg>
               Back to Home
             </Link>
@@ -84,13 +84,14 @@ export default async function PostDetail({ params }: { params: { id: string } })
                 alt={post.title}
                 fill
                 className="object-cover"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                sizes="100vw"
+                priority
               />
             </div>
 
             <div className="p-8">
               <h1 className="text-3xl font-bold text-gray-900 mb-4">{post.title}</h1>
-              
+
               <div className="flex items-center mb-8">
                 <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-xl mr-4">
                   {user.name.charAt(0)}
@@ -103,7 +104,9 @@ export default async function PostDetail({ params }: { params: { id: string } })
 
               <div className="prose max-w-none text-gray-700 mb-12">
                 {post.body.split('\n').map((paragraph, i) => (
-                  <p key={i} className="mb-4">{paragraph}</p>
+                  <p key={i} className="mb-4">
+                    {paragraph}
+                  </p>
                 ))}
               </div>
 
@@ -152,6 +155,6 @@ export default async function PostDetail({ params }: { params: { id: string } })
       </div>
     );
   } catch (error) {
-    notFound();
+    return notFound();
   }
 }

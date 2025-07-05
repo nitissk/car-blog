@@ -48,7 +48,7 @@ export default function BlogPage() {
 
     const limitedPosts = postsData.slice(0, 50).map((post, idx) => ({
       ...post,
-      category: categories[(idx % (categories.length - 1)) + 1], // Skip "All"
+      category: categories[(idx % (categories.length - 1)) + 1], 
     }));
     setPosts(limitedPosts);
 

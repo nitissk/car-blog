@@ -17,10 +17,10 @@ export const carBlogContent = {
       <p>
         The journey began in 1885 when Karl Benz introduced the first gasoline-powered car.
         What started as an experimental motorized carriage eventually revolutionized the
-        world. The 20th century brought mass production through Ford's assembly line,
+        world. The 20th century brought mass production through Ford&apos;s assembly line,
         transforming cars from luxuries into daily essentials. Over the decades, vehicles
         evolved not only in performance but in safety, efficiency, and comfort — laying the
-        foundation for today's mobility innovations.
+        foundation for today&apos;s mobility innovations.
       </p>
 
       <h3 className="text-2xl font-semibold underline decoration-indigo-400 mt-10">
@@ -31,7 +31,7 @@ export const carBlogContent = {
         been fueled by advancements in lithium-ion battery technology, longer driving ranges,
         and growing environmental awareness. Brands like Tesla, BYD, Hyundai, and Ford are
         aggressively expanding their EV lineups to cater to the rising demand for sustainable
-        mobility. Notably, EVs are not just cleaner — they’re also smoother, quieter, and
+        mobility. Notably, EVs are not just cleaner — they&apos;re also smoother, quieter, and
         require less maintenance than internal combustion engine (ICE) counterparts.
       </p>
       <p>
@@ -45,7 +45,7 @@ export const carBlogContent = {
         🤖 Autonomous Driving Technology
       </h3>
       <p>
-        Another groundbreaking frontier is autonomous driving. Today’s vehicles already feature
+        Another groundbreaking frontier is autonomous driving. Today&apos;s vehicles already feature
         semi-autonomous capabilities such as adaptive cruise control, lane keeping, and
         automated parking. Companies like Tesla, Waymo, and NVIDIA are pushing toward higher
         levels of autonomy, with AI-powered navigation and decision-making systems at their
@@ -63,14 +63,14 @@ export const carBlogContent = {
         🔗 Smart Features & Connected Cars
       </h3>
       <p>
-        Today’s cars are more than machines — they’re intelligent devices on wheels. From
+        Today&apos;s cars are more than machines — they&apos;re intelligent devices on wheels. From
         real-time navigation and over-the-air (OTA) updates to remote vehicle access and AI
         voice assistants, connectivity is redefining the in-car experience. Integration with
         smartphones, cloud platforms, and smart homes allows drivers to interact with their
         vehicles like never before.
       </p>
       <p>
-        Whether it's remote climate control, live diagnostics, or personalized user profiles,
+        Whether it&apos;s remote climate control, live diagnostics, or personalized user profiles,
         connected cars add layers of convenience and safety. As 5G becomes more ubiquitous,
         Vehicle-to-Everything (V2X) communication will further enhance traffic awareness and
         automated decision-making.
@@ -80,7 +80,7 @@ export const carBlogContent = {
         🌿 Green Materials and Manufacturing
       </h3>
       <p>
-        Sustainability isn't limited to emissions. Modern automakers are rethinking how cars
+        Sustainability isn&apos;t limited to emissions. Modern automakers are rethinking how cars
         are built. Vegan leather, recycled plastics, water-based paints, and aluminum body
         panels sourced from eco-conscious suppliers are becoming common. Even factories are
         shifting toward renewable energy and carbon-neutral operations.
@@ -102,7 +102,7 @@ export const carBlogContent = {
         driving modes.
       </p>
       <p>
-        Cars are now an extension of the user’s lifestyle. Whether you're commuting, road
+        Cars are now an extension of the user&apos;s lifestyle. Whether you&apos;re commuting, road
         tripping, or remotely managing your car via an app — the experience must be intuitive,
         tailored, and tech-forward.
       </p>
@@ -112,12 +112,12 @@ export const carBlogContent = {
       </h3>
       <p>
         As the car market becomes more complex, prospective buyers must consider more than
-        horsepower and mileage. Questions like "Is EV charging available near me?", "Does the
-        vehicle support OTA updates?", or "Do I need Level 2+ autonomy for highway driving?"
+        horsepower and mileage. Questions like &quot;Is EV charging available near me?&quot;, &quot;Does the
+        vehicle support OTA updates?&quot;, or &quot;Do I need Level 2+ autonomy for highway driving?&quot;
         are becoming standard.
       </p>
       <p>
-        Buyers should also evaluate the long-term costs of ownership, the brand’s tech
+        Buyers should also evaluate the long-term costs of ownership, the brand&apos;s tech
         ecosystem, software update frequency, and resale value. The future belongs to vehicles
         that blend performance with intelligence, sustainability, and reliability.
       </p>
@@ -148,7 +148,7 @@ export const carBlogContent = {
         sustainable lifestyle companions.
       </p>
       <p>
-        Whether you're an enthusiast, investor, or everyday driver — understanding these shifts
+        Whether you&apos;re an enthusiast, investor, or everyday driver — understanding these shifts
         can help you make informed decisions in the years ahead. As the industry continues to
         electrify, digitize, and personalize, one thing is clear: the future of cars is as
         exciting as it is inevitable.
