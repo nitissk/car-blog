@@ -8,7 +8,7 @@ export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-     country: "",
+    country: "",
     subject: "",
     message: "",
   });
@@ -66,7 +66,6 @@ export default function ContactPage() {
       newErrors.email = "";
     }
 
-
     // Country validation
     if (!formData.country.trim()) {
       newErrors.country = "Country is required";
@@ -77,8 +76,6 @@ export default function ContactPage() {
     } else {
       newErrors.country = "";
     }
-
-
 
     // Subject validation
     if (!formData.subject.trim()) {
@@ -119,7 +116,7 @@ export default function ContactPage() {
             setFormData({
               name: "",
               email: "",
-               country: "",
+              country: "",
               subject: "",
               message: "",
             });
@@ -128,9 +125,7 @@ export default function ContactPage() {
         }),
         {
           loading: "Sending message...",
-          success: (
-            <b>Message sent successfully! We'll get back to you soon.</b>
-          ),
+          success: <b>Message sent successfully! We&apos;ll get back to you soon.</b>,
           error: <b>Could not send message. Please try again.</b>,
         }
       );
@@ -148,84 +143,82 @@ export default function ContactPage() {
             Contact Us
           </h1>
           <p className="mt-2 text-xl text-gray-500">
-            Have questions? We're here to help!
+            Have questions? We&apos;re here to help!
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Owner Details - Left Side */}
-   <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
-  <h2 className="text-2xl font-bold text-gray-800 mb-6">Our Office</h2>
+          <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+            <h2 className="text-2xl font-bold text-gray-800 mb-6">Our Office</h2>
 
-  <div className="space-y-2">
-    {/* Address Card */}
-    <div className="flex items-start p-2 rounded-lg bg-blue-50/50 hover:bg-blue-50 transition-colors duration-200">
-      <div className="flex-shrink-0 p-2 bg-blue-100 rounded-lg">
-        <FiMapPin className="h-5 w-5 text-blue-600" />
-      </div>
-      <div className="ml-4">
-        <h3 className="text-lg font-semibold text-gray-800">Address</h3>
-        <p className="mt-1 text-gray-600 leading-relaxed">
-          123 Auto Street, Connaught Place<br />
-          New Delhi, 110001 , India
-          
-        </p>
-      </div>
-    </div>
+            <div className="space-y-2">
+              {/* Address Card */}
+              <div className="flex items-start p-2 rounded-lg bg-blue-50/50 hover:bg-blue-50 transition-colors duration-200">
+                <div className="flex-shrink-0 p-2 bg-blue-100 rounded-lg">
+                  <FiMapPin className="h-5 w-5 text-blue-600" />
+                </div>
+                <div className="ml-4">
+                  <h3 className="text-lg font-semibold text-gray-800">Address</h3>
+                  <p className="mt-1 text-gray-600 leading-relaxed">
+                    123 Auto Street, Connaught Place<br />
+                    New Delhi, 110001 , India
+                  </p>
+                </div>
+              </div>
 
-    {/* Phone Card */}
-    <div className="flex items-start p-4 rounded-lg bg-green-50/50 hover:bg-green-50 transition-colors duration-200">
-      <div className="flex-shrink-0 p-2 bg-green-100 rounded-lg">
-        <FiPhone className="h-5 w-5 text-green-600" />
-      </div>
-      <div className="ml-4">
-        <h3 className="text-lg font-semibold text-gray-800">Phone</h3>
-        <p className="mt-1 text-gray-600 leading-relaxed">
-          +91 98765 43210 (Mobile)<br />
-          +91 11 2345 6789 (Office)
-        </p>
-      </div>
-    </div>
+              {/* Phone Card */}
+              <div className="flex items-start p-4 rounded-lg bg-green-50/50 hover:bg-green-50 transition-colors duration-200">
+                <div className="flex-shrink-0 p-2 bg-green-100 rounded-lg">
+                  <FiPhone className="h-5 w-5 text-green-600" />
+                </div>
+                <div className="ml-4">
+                  <h3 className="text-lg font-semibold text-gray-800">Phone</h3>
+                  <p className="mt-1 text-gray-600 leading-relaxed">
+                    +91 98765 43210 (Mobile)<br />
+                    +91 11 2345 6789 (Office)
+                  </p>
+                </div>
+              </div>
 
-    {/* Email Card */}
-    <div className="flex items-start p-4 rounded-lg bg-purple-50/50 hover:bg-purple-50 transition-colors duration-200">
-      <div className="flex-shrink-0 p-2 bg-purple-100 rounded-lg">
-        <FiMail className="h-5 w-5 text-purple-600" />
-      </div>
-      <div className="ml-4">
-        <h3 className="text-lg font-semibold text-gray-800">Email</h3>
-        <p className="mt-1 text-gray-600 leading-relaxed">
-          info@evdrive.com (General)<br />
-          support@evdrive.com (Support)
-        </p>
-      </div>
-    </div>
+              {/* Email Card */}
+              <div className="flex items-start p-4 rounded-lg bg-purple-50/50 hover:bg-purple-50 transition-colors duration-200">
+                <div className="flex-shrink-0 p-2 bg-purple-100 rounded-lg">
+                  <FiMail className="h-5 w-5 text-purple-600" />
+                </div>
+                <div className="ml-4">
+                  <h3 className="text-lg font-semibold text-gray-800">Email</h3>
+                  <p className="mt-1 text-gray-600 leading-relaxed">
+                    info@evdrive.com (General)<br />
+                    support@evdrive.com (Support)
+                  </p>
+                </div>
+              </div>
 
-    {/* Business Hours Card */}
-    <div className="flex items-start p-4 rounded-lg bg-amber-50/50 hover:bg-amber-50 transition-colors duration-200">
-      <div className="flex-shrink-0 p-2 bg-amber-100 rounded-lg">
-        <FiClock className="h-5 w-5 text-amber-600" />
-      </div>
-      <div className="ml-4">
-        <h3 className="text-lg font-semibold text-gray-800">Business Hours</h3>
-        <p className="mt-1 text-gray-600 leading-relaxed">
-          Monday - Friday: 9:00 AM - 6:00 PM<br />
-        </p>
-      </div>
-    </div>
+              {/* Business Hours Card */}
+              <div className="flex items-start p-4 rounded-lg bg-amber-50/50 hover:bg-amber-50 transition-colors duration-200">
+                <div className="flex-shrink-0 p-2 bg-amber-100 rounded-lg">
+                  <FiClock className="h-5 w-5 text-amber-600" />
+                </div>
+                <div className="ml-4">
+                  <h3 className="text-lg font-semibold text-gray-800">Business Hours</h3>
+                  <p className="mt-1 text-gray-600 leading-relaxed">
+                    Monday - Friday: 9:00 AM - 6:00 PM<br />
+                  </p>
+                </div>
+              </div>
 
-    {/* About Section */}
-    <div className="mt-3 p-1 rounded-lg bg-gray-50 border border-gray-100">
-      <h3 className="text-lg font-semibold text-gray-800 mb-3">About EV Drive</h3>
-      <p className="text-gray-600 leading-relaxed">
-        EV Drive is a premier automotive blog headquartered in New Delhi, India. 
-        We specialize in delivering cutting-edge news, comprehensive reviews, 
-        and expert analysis on electric vehicles and sustainable mobility solutions.
-      </p>
-      
-    </div>
-  </div>
-</div>
+              {/* About Section */}
+              <div className="mt-3 p-1 rounded-lg bg-gray-50 border border-gray-100">
+                <h3 className="text-lg font-semibold text-gray-800 mb-3">About EV Drive</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  EV Drive is a premier automotive blog headquartered in New Delhi, India. 
+                  We specialize in delivering cutting-edge news, comprehensive reviews, 
+                  and expert analysis on electric vehicles and sustainable mobility solutions.
+                </p>
+              </div>
+            </div>
+          </div>
 
           {/* Contact Form - Right Side */}
           <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
@@ -277,7 +270,6 @@ export default function ContactPage() {
                 )}
               </div>
 
-
               <div>
                 <label
                   htmlFor="country"
@@ -293,7 +285,7 @@ export default function ContactPage() {
                   onChange={handleChange}
                   className={`block w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500
                     ${errors.country ? "border-red-500" : "border-gray-300"}`}
-                  placeholder="Your full name"
+                  placeholder="Your country"
                 />
                 {errors.country && (
                   <p className="mt-1 text-sm text-red-600">{errors.country}</p>

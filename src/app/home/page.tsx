@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Head from "next/head";
-import { imageData } from "../blog/[id]/blogData"; // Ensure correct path
+import { imageData } from "../blog/[id]/blogData"; 
 
 interface Post {
   id: number;
@@ -32,7 +32,6 @@ export default function Home() {
       const limitedPosts = postsData.slice(0, 5);
       setPosts(limitedPosts);
 
-      // Fetch full users.json ONCE and map it
       const usersResponse = await fetch("/api/users.json");
       const usersList: User[] = await usersResponse.json();
 
@@ -63,7 +62,7 @@ export default function Home() {
 
   const getImageForPost = (postId: number) => {
   const imageObj = imageData.find((img) => img.id === postId);
-  return imageObj?.src || "/c4.png"; // fallback image
+  return imageObj?.src || "/c4.png"; 
 };
 
 
@@ -135,7 +134,7 @@ export default function Home() {
                       {latestPost.title}
                     </h3>
                     <p className="text-gray-600 mb-6 leading-relaxed">
-                      {latestPost.body.substring(0, 200)}...
+                      {latestPost.body.substring(0, 500)}...
                     </p>
                     <Link
                       href={`/blog/${latestPost.id}`}

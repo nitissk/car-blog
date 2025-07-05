@@ -3,15 +3,15 @@ import Logo from "@/components/Logo";
 export default function AboutPage() {
   return (
     <div className="max-w-7xl mx-auto py-8 px-4">
-      <h1 className="text-3xl font-bold mb-8">About CarBlog</h1>
+      <h1 className="text-3xl font-bold mb-8">About EV Drive</h1>
 
       <div className="mb-12">
         <div className="flex items-center mb-6">
           <Logo />
         </div>
         <p className="text-lg text-gray-700 mb-6">
-          Welcome to <span className="font-semibold">CarBlog</span>, your
-          ultimate destination for all things automotive. We're passionate about
+          Welcome to <span className="font-semibold">EV Drive</span>, your
+          ultimate destination for all things automotive. We&apos;re passionate about
           cars and committed to bringing you the latest news, in-depth reviews,
           and expert advice to fuel your automotive enthusiasm.
         </p>
@@ -29,7 +29,7 @@ export default function AboutPage() {
           <li>Demystify car technology for everyday drivers</li>
           <li>Provide unbiased reviews you can trust</li>
           <li>Help you make informed purchasing decisions</li>
-          <li>Share maintenance tips to extend your vehicle's life</li>
+          <li>Share maintenance tips to extend your vehicle&apos;s life</li>
           <li>Cover the exciting transition to electric vehicles</li>
         </ul>
       </div>
@@ -81,7 +81,7 @@ export default function AboutPage() {
           Our Tech Stack
         </h2>
         <p className="text-gray-700 mb-6">
-          CarBlog is built with modern web technologies to deliver a fast,
+          EV Drive is built with modern web technologies to deliver a fast,
           responsive, and enjoyable reading experience:
         </p>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -115,7 +115,7 @@ export default function AboutPage() {
       <div className="bg-blue-50 p-6 rounded-lg">
         <h3 className="text-xl font-semibold mb-3">Join Our Community</h3>
         <p className="text-gray-700 mb-4">
-          We're more than just a blog - we're a community of car enthusiasts.
+          We&apos;re more than just a blog - we&apos;re a community of car enthusiasts.
           Subscribe to our newsletter to stay updated on the latest posts and
           join the conversation.
         </p>

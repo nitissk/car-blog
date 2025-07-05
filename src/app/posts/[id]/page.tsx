@@ -154,7 +154,7 @@ export default async function PostDetail({ params }: { params: { id: string } })
         </div>
       </div>
     );
-  } catch (error) {
-    return notFound();
+  } catch (err) {
+    notFound();
   }
 }
