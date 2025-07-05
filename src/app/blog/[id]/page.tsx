@@ -41,20 +41,24 @@ interface User {
 }
 
 interface CarSpecs {
-  warranty: string;
-  transmission: string;
-  drivetrain: string;
-  fuelEfficiency: string;
-  colorOptions: string;
-  weight: string;
-  safetyRating: string;
-  seatingCapacity: string;
   modelYear: string;
   fuelType: string;
   engine: string;
   topSpeed: string;
   acceleration: string;
   price: string;
+  transmission: string;
+  drivetrain: string;
+  fuelEfficiency: string;
+  seatingCapacity: string;
+  safetyRating: string;
+  weight: string;
+  colorOptions: string;
+  warranty: string;
+  maintenanceCost: string;
+  bootSpace: string;
+  groundClearance: string;
+  batteryCapacity?: string;
 }
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
