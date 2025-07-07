@@ -121,9 +121,8 @@ interface PageProps {
   params: { id: string };
 }
 
-export async function generateMetadata({ params }: PageProps) {
-  const { id } = await params;
-  const postId = parseInt(id);
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
+  const postId = parseInt((await params).id);
 
   let post: Post | undefined;
   try {
@@ -141,9 +140,8 @@ export async function generateMetadata({ params }: PageProps) {
   };
 }
 
-export default async function BlogDetail({ params }: PageProps) {
-  const { id } = await params;
-  const postId = parseInt(id);
+export default async function BlogDetail({ params }: { params: Promise<{ id: string }> }) {
+  const postId = parseInt((await params).id);
 
   if (isNaN(postId)) {
     notFound();
