@@ -54,8 +54,8 @@ function generateCarSpecs(postId: number): CarSpecs {
   };
 }
 
-export default async function PostDetail({ params }: { params: { id: string } }) {
-  const postId = Number(params.id);
+export default async function PostDetail({ params }: { params: Promise<{ id: string }> }) {
+  const postId = parseInt((await params).id);
 
   try {
     const post = await getPost(postId);
