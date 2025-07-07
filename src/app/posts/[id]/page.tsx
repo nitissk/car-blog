@@ -63,85 +63,93 @@ export default async function PostDetail({ params }: { params: Promise<{ id: str
     const carSpecs = generateCarSpecs(post.id);
 
     return (
-      <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-8">
+      <div className="min-h-screen bg-gray-50 py-8 px-4 sm:py-12 sm:px-6 lg:py-16 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="mb-6 sm:mb-8">
             <Link
               href="/"
-              className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors"
+              className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors text-sm sm:text-base"
             >
-              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
               </svg>
               Back to Home
             </Link>
           </div>
 
-          <article className="bg-white rounded-xl shadow-md overflow-hidden">
-            <div className="h-96 relative bg-gray-100">
+          <article className="bg-white rounded-lg sm:rounded-xl shadow-md overflow-hidden">
+            <div className="h-48 sm:h-64 md:h-80 lg:h-96 relative bg-gray-100">
               <Image
                 src={`https://source.unsplash.com/1600x900/?car,${post.id}`}
                 alt={post.title}
                 fill
                 className="object-cover"
-                sizes="100vw"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 priority
               />
             </div>
 
-            <div className="p-8">
-              <h1 className="text-3xl font-bold text-gray-900 mb-4">{post.title}</h1>
+            <div className="p-4 sm:p-6 md:p-8">
+              <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
+                {post.title}
+              </h1>
 
-              <div className="flex items-center mb-8">
-                <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-xl mr-4">
+              <div className="flex items-center mb-6 sm:mb-8">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-lg sm:text-xl mr-3 sm:mr-4">
                   {user.name.charAt(0)}
                 </div>
                 <div>
-                  <p className="font-medium text-gray-900">{user.name}</p>
-                  <p className="text-sm text-gray-600">{user.email}</p>
+                  <p className="font-medium text-gray-900 text-sm sm:text-base">{user.name}</p>
+                  <p className="text-xs sm:text-sm text-gray-600">{user.email}</p>
                 </div>
               </div>
 
-              <div className="prose max-w-none text-gray-700 mb-12">
+              <div className="prose max-w-none text-gray-700 mb-8 sm:mb-12 text-sm sm:text-base">
                 {post.body.split('\n').map((paragraph, i) => (
-                  <p key={i} className="mb-4">
+                  <p key={i} className="mb-3 sm:mb-4">
                     {paragraph}
                   </p>
                 ))}
               </div>
 
-              <div className="border-t border-gray-200 pt-8">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Vehicle Specifications</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="bg-gray-50 p-6 rounded-lg">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-4">Technical Details</h3>
-                    <ul className="space-y-3">
-                      <li className="flex justify-between">
+              <div className="border-t border-gray-200 pt-6 sm:pt-8">
+                <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">
+                  Vehicle Specifications
+                </h2>
+                <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2">
+                  <div className="bg-gray-50 p-4 sm:p-6 rounded-lg">
+                    <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-3 sm:mb-4">
+                      Technical Details
+                    </h3>
+                    <ul className="space-y-2 sm:space-y-3">
+                      <li className="flex justify-between text-sm sm:text-base">
                         <span className="text-gray-600">Model Year</span>
                         <span className="font-medium">{carSpecs.modelYear}</span>
                       </li>
-                      <li className="flex justify-between">
+                      <li className="flex justify-between text-sm sm:text-base">
                         <span className="text-gray-600">Fuel Type</span>
                         <span className="font-medium">{carSpecs.fuelType}</span>
                       </li>
-                      <li className="flex justify-between">
+                      <li className="flex justify-between text-sm sm:text-base">
                         <span className="text-gray-600">Engine</span>
                         <span className="font-medium">{carSpecs.engine}</span>
                       </li>
                     </ul>
                   </div>
-                  <div className="bg-gray-50 p-6 rounded-lg">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-4">Performance</h3>
-                    <ul className="space-y-3">
-                      <li className="flex justify-between">
+                  <div className="bg-gray-50 p-4 sm:p-6 rounded-lg">
+                    <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-3 sm:mb-4">
+                      Performance
+                    </h3>
+                    <ul className="space-y-2 sm:space-y-3">
+                      <li className="flex justify-between text-sm sm:text-base">
                         <span className="text-gray-600">Top Speed</span>
                         <span className="font-medium">{carSpecs.topSpeed}</span>
                       </li>
-                      <li className="flex justify-between">
+                      <li className="flex justify-between text-sm sm:text-base">
                         <span className="text-gray-600">0-60 Acceleration</span>
                         <span className="font-medium">{carSpecs.acceleration}</span>
                       </li>
-                      <li className="flex justify-between">
+                      <li className="flex justify-between text-sm sm:text-base">
                         <span className="text-gray-600">Starting Price</span>
                         <span className="font-medium text-blue-600">{carSpecs.price}</span>
                       </li>

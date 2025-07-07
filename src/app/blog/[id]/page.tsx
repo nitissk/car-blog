@@ -191,7 +191,7 @@ export default async function BlogDetail({ params }: { params: Promise<{ id: str
                       d="M10 19l-7-7m0 0l7-7m-7 7h18"
                     ></path>
                   </svg>
-                  Back to All Blog Post
+                  Back
                 </Link>
               </div>
             </div>
@@ -237,84 +237,91 @@ export default async function BlogDetail({ params }: { params: Promise<{ id: str
                   </div>
                 </div>
               </div>
+            </div>
 
-              <div className="px-8 py-6 hover:shadow-sm transition-shadow">
-                <div className="flex flex-col sm:flex-row items-center sm:items-start sm:justify-between flex-wrap gap-6">
-                  <div className="relative group">
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white font-bold text-2xl transition-all duration-300 group-hover:shadow-md">
+            {/* Author Profile Section */}
+            <div className="px-4 sm:px-6 md:px-8 lg:px-12 py-6 border-b border-gray-100">
+              <div className="max-w-4xl mx-auto">
+                <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 md:gap-8">
+                  {/* Author Avatar */}
+                  <div className="relative group shrink-0">
+                    <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white font-bold text-xl sm:text-2xl shadow-md">
                       {user.name.charAt(0)}
                     </div>
-                    <div className="absolute inset-0 rounded-full border-2 border-transparent group-hover:border-blue-300 transition-all duration-300"></div>
+                    <div className="absolute inset-0 rounded-full border-2 border-transparent group-hover:border-blue-300 transition-all duration-300" />
                   </div>
 
-                  <div className="w-full sm:flex-1">
-                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                      <div>
-                        <div className="flex items-center flex-wrap gap-2">
-                          <h3 className="text-lg font-semibold text-gray-900 cursor-pointer">
+                  {/* Author Info */}
+                  <div className="flex-1 w-full">
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4">
+                      <div className="text-center sm:text-left">
+                        <div className="flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-1 sm:gap-2">
+                          <h3 className="text-base sm:text-lg font-semibold text-gray-900">
                             {user.name}
                           </h3>
-                          <span className="px-2.5 py-0.5 bg-blue-50 text-blue-600 text-xs font-medium rounded-full flex items-center cursor-pointer">
-                            <FaShieldAlt className="mr-1.5" />
+                          <span className="px-2 py-0.5 bg-blue-50 text-blue-600 text-xs font-medium rounded-full flex items-center justify-center sm:justify-start mx-auto sm:mx-0 max-w-max">
+                            <FaShieldAlt className="mr-1.5 w-3 h-3" />
                             Verified Author
                           </span>
                         </div>
-                        <p className="text-sm text-gray-600 flex items-center mt-1 cursor-pointer">
-                          <FaEnvelope className="mr-2 text-blue-400" />
+                        <p className="text-sm text-gray-600 flex items-center justify-center sm:justify-start mt-1">
+                          <FaEnvelope className="mr-2 text-blue-400 w-3 h-3" />
                           {user.email}
                         </p>
                       </div>
 
-                      <div className="flex gap-3">
-                        <button className="inline-flex items-center px-4 py-2 cursor-pointer bg-white border border-gray-200 text-sm font-medium rounded-full text-blue-600 hover:bg-blue-50 hover:border-blue-100 transition-colors">
-                          <FaUserPlus className="mr-2" />
+                      {/* Action Buttons */}
+                      <div className="flex justify-center sm:justify-end gap-2 sm:gap-3">
+                        <button className="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 bg-white border border-gray-200 text-xs sm:text-sm font-medium rounded-full text-blue-600 hover:bg-blue-50 hover:border-blue-100 transition-colors">
+                          <FaUserPlus className="mr-1.5 w-3 h-3 sm:w-4 sm:h-4" />
                           Follow
                         </button>
-                        <button className="inline-flex items-center cursor-pointer px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-full hover:bg-blue-700 transition-colors">
-                          <FaEnvelope className="mr-2" />
+                        <button className="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 bg-blue-600 text-white text-xs sm:text-sm font-medium rounded-full hover:bg-blue-700 transition-colors">
+                          <FaEnvelope className="mr-1.5 w-3 h-3 sm:w-4 sm:h-4" />
                           Contact
                         </button>
                       </div>
                     </div>
 
-                    <div className="flex flex-wrap items-center mt-4 pt-4 border-t border-gray-100 gap-4 text-sm text-gray-500">
+                    {/* Author Stats */}
+                    <div className="flex flex-wrap items-center justify-center sm:justify-start mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-gray-100 gap-2 sm:gap-4 text-xs sm:text-sm text-gray-500">
                       <span className="flex items-center">
-                        <FaCalendarCheck className="mr-2 text-blue-400" />
+                        <FaCalendarCheck className="mr-1.5 text-blue-400 w-3 h-3 sm:w-4 sm:h-4" />
                         Member since{" "}
                         {new Date(user.joinDate).toLocaleDateString("en-US", {
                           year: "numeric",
                         })}
                       </span>
                       <span className="flex items-center">
-                        <FaNewspaper className="mr-2 text-blue-400" />
+                        <FaNewspaper className="mr-1.5 text-blue-400 w-3 h-3 sm:w-4 sm:h-4" />
                         {user.postCount} articles
                       </span>
-                      <span className="flex items-center text-sm text-gray-700 space-x-1">
+                      <span className="flex items-center">
                         {[1, 2, 3, 4, 5].map((star) => {
                           if (ratingValue >= star) {
                             return (
                               <FaStar
                                 key={star}
-                                className="text-yellow-400 w-4 h-4"
+                                className="text-yellow-400 w-3 h-3 sm:w-4 sm:h-4"
                               />
                             );
                           } else if (ratingValue >= star - 0.5) {
                             return (
                               <FaStarHalfAlt
                                 key={star}
-                                className="text-yellow-400 w-4 h-4"
+                                className="text-yellow-400 w-3 h-3 sm:w-4 sm:h-4"
                               />
                             );
                           } else {
                             return (
                               <FaRegStar
                                 key={star}
-                                className="text-gray-300 w-4 h-4"
+                                className="text-gray-300 w-3 h-3 sm:w-4 sm:h-4"
                               />
                             );
                           }
                         })}
-                        <span className="ml-2 font-medium text-gray-600">
+                        <span className="ml-1 sm:ml-2 font-medium text-gray-600">
                           {rating} rating
                         </span>
                       </span>
@@ -323,8 +330,7 @@ export default async function BlogDetail({ params }: { params: Promise<{ id: str
                 </div>
               </div>
             </div>
-
-            <div className="w-7xl mx-auto py-5">
+            <div className=" mx-auto py-5">
               <h2 className="px-6 py-4 text-3xl font-bold mb-6 text-gray-900">
                 {carBlogContent.title}
               </h2>

@@ -49,55 +49,55 @@ export default function NewTechnologyPage() {
   ];
 
   return (
-    <div className="min-h-auto bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-auto bg-gray-50 py-12 px-4 sm:py-16 sm:px-6 lg:px-8">
       <div className="max-w-8xl mx-auto">
         {/* Page Heading with See All */}
-        <div className="mb-16 relative">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 text-center">
+        <div className="mb-12 sm:mb-16 relative flex flex-col sm:flex-row justify-between items-center gap-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 text-center sm:text-left">
             New <span className="text-blue-600">Technology</span>
           </h1>
           <Link
             href="/blog"
-            className="absolute right-0 top-1/2 -translate-y-1/2 text-sm text-blue-600 border border-blue-100 bg-white px-4 py-2 rounded-full shadow hover:bg-blue-50 transition"
+            className="text-sm sm:text-base text-blue-600 border border-blue-100 bg-white px-4 py-2 rounded-full shadow hover:bg-blue-50 transition whitespace-nowrap"
           >
-            See All
+            See All Articles
           </Link>
         </div>
 
         {/* Articles Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {articles.map((article) => (
             <article
               key={article.id}
-              className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 group min-h-[360px] flex flex-col"
+              className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 group flex flex-col h-full"
             >
               {/* Image Section */}
-              <div className="relative h-60 w-full overflow-hidden">
+              <div className="relative aspect-video w-full overflow-hidden">
                 <Image
                   src={article.image}
                   alt={article.title}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 479px) 100vw, (max-width: 767px) 50vw, (max-width: 1023px) 33vw, 25vw"
                   priority={article.id <= 2}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent"></div>
               </div>
 
               {/* Content Section */}
-              <div className="p-6 flex-1 flex flex-col justify-between">
-                <h2 className="text-xl font-bold text-gray-800 mb-4 line-clamp-2 leading-snug">
+              <div className="p-4 sm:p-5 flex-1 flex flex-col">
+                <h2 className="text-lg sm:text-xl font-bold text-gray-800 mb-3 line-clamp-2 leading-snug">
                   {article.title}
                 </h2>
-                <div className="flex items-center gap-3 mt-auto">
-                  <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold shadow-sm">
+                <div className="flex items-center gap-3 mt-auto pt-3">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-sm sm:text-base shadow-sm">
                     {article.author.charAt(0)}
                   </div>
                   <div>
                     <p className="text-sm font-medium text-blue-600">
                       {article.author}
                     </p>
-                    <div className="flex items-center text-xs text-gray-500 gap-2">
+                    <div className="flex items-center text-xs text-gray-500 gap-1 sm:gap-2">
                       <span>{article.date}</span>
                       <span className="text-gray-300">•</span>
                       <span>{article.readTime}</span>

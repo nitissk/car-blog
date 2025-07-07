@@ -1,15 +1,13 @@
-import Logo from "@/components/Logo";
+import { FaCar } from "react-icons/fa";
 
 export default function AboutPage() {
   return (
     <div className="max-w-7xl mx-auto py-8 px-4">
-      <h1 className="text-3xl font-bold mb-8">About EV Drive</h1>
+      <h1 className="flex flex-hor text-3xl font-bold mb-8 gap-4">About EV Drive<FaCar/></h1>
 
       <div className="mb-12">
-        <div className="flex items-center mb-6">
-          <Logo />
-        </div>
-        <p className="text-lg text-gray-700 mb-6">
+        
+        <p className="text-lg text-gray-700 mb-6 text-justify bg-gray-50 p-6 rounded-lg">
           Welcome to <span className="font-semibold">EV Drive</span>, your
           ultimate destination for all things automotive. We&apos;re passionate about
           cars and committed to bringing you the latest news, in-depth reviews,
@@ -17,15 +15,15 @@ export default function AboutPage() {
         </p>
       </div>
 
-      <div className="mb-12">
-        <h2 className="text-2xl font-bold mb-4 text-blue-600">Why We Exist</h2>
-        <p className="text-gray-700 mb-4">
+      <div className="mb-12 ">
+        <h2 className="text-2xl font-bold mb-4 text-blue-600 bg-gray-50 p-6 rounded-lg">Why We Exist</h2>
+        <p className="text-gray-700 mb-4 text-justify bg-gray-50 p-6 rounded-lg">
           In a world where the automotive industry is evolving faster than ever,
           we saw a need for a reliable, comprehensive source of car information
           that caters to both casual enthusiasts and hardcore gearheads alike.
         </p>
-        <p className="text-gray-700 mb-4">Our mission is to:</p>
-        <ul className="list-disc pl-6 mb-4 space-y-2 text-gray-700">
+        <p className="text-gray-700 mb-4 pl-6  bg-gray-50 p-6 rounded-lg">Our mission is to:</p>
+        <ul className="list-disc pl-8 mb-4 space-y-2 text-gray-700 bg-gray-50 p-6 rounded-lg">
           <li>Demystify car technology for everyday drivers</li>
           <li>Provide unbiased reviews you can trust</li>
           <li>Help you make informed purchasing decisions</li>
@@ -35,7 +33,7 @@ export default function AboutPage() {
       </div>
 
       <div className="mb-12">
-        <h2 className="text-2xl font-bold mb-4 text-blue-600">What We Cover</h2>
+        <h2 className="text-2xl font-bold mb-4 text-blue-600 bg-gray-50 p-6 rounded-lg" >What We Cover</h2>
         <div className="grid md:grid-cols-2 gap-8">
           <div className="bg-gray-50 p-6 rounded-lg">
             <h3 className="text-xl font-semibold mb-3">Vehicle Reviews</h3>
@@ -77,10 +75,10 @@ export default function AboutPage() {
       </div>
 
       <div className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-600">
+        <h2 className="text-2xl font-bold mb-4 text-blue-600 bg-gray-50 p-6 rounded-lg">
           Our Tech Stack
         </h2>
-        <p className="text-gray-700 mb-6">
+        <p className="text-gray-700 mb-6 bg-gray-50 p-6 rounded-lg">
           EV Drive is built with modern web technologies to deliver a fast,
           responsive, and enjoyable reading experience:
         </p>
@@ -114,7 +112,7 @@ export default function AboutPage() {
 
       <div className="bg-blue-50 p-6 rounded-lg">
         <h3 className="text-xl font-semibold mb-3">Join Our Community</h3>
-        <p className="text-gray-700 mb-4">
+        <p className="text-gray-700 mb-4 text-justify">
           We&apos;re more than just a blog - we&apos;re a community of car enthusiasts.
           Subscribe to our newsletter to stay updated on the latest posts and
           join the conversation.

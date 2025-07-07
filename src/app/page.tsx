@@ -1,6 +1,5 @@
 import React from "react";
 import Home from "./home/page";
-// import Top from "../components/blogTop";
 import NewTechnologyPage from "./home/NewTechnologyPage";
 import {
   categoryCards,
